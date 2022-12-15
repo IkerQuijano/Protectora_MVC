@@ -82,11 +82,13 @@ input {
 </style>
 <body>
     <?php
-    include_once "Conexion.php";
-    include_once "CRUD.php";
-    include_once "Usuario.php";
-    include_once "Animal.php";
-    include_once "Adopcion.php";
+
+
+    include_once "../MVC-iker/Modelo/Conexion.php";
+    include_once "../MVC-iker/Modelo/CRUD.php";
+    include_once "../MVC-iker/Modelo/Usuario.php";
+    include_once "../MVC-iker/Modelo/Animal.php";
+
 
     
 
