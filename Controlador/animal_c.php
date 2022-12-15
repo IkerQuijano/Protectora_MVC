@@ -1,6 +1,7 @@
 <?
 
 require_once "../Modelo/Animal.php";
+require_once "../Vista/index.php";
 
 class Animal_c{
 
@@ -11,14 +12,15 @@ class Animal_c{
         $this->animal = new Animal();
     }
 
-    function borrar(){
-        
+    function borrar($idParam){
+        $this->animal->borra($idParam);
     }
 
     function mostrar(){
         $objectTabla = $this->animal->obtieneTodos();
+        
     }
-
+    
 }
 
 ?>

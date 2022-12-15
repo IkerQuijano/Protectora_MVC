@@ -17,6 +17,15 @@ abstract class CRUD extends Conexion{
         }
     }
 
+    public function obtieneCabeceraDeTabla(){
+        $arrayCabecera = array();
+        $statement = $this->conexion->prepare("SHOW COLUMNS FROM $tabla");
+        if ($statement->execute()) {
+            $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $arrayCabecera = array_column($resultSet, "Field");
+        } 
+    }
+
     public function obtieneDeID($idParametro){
         $statement = $this->conexion->prepare("SELECT $idParametro FROM $this->tabla ");
         if ($statement->execute()) {
